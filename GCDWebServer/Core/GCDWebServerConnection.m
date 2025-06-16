@@ -180,7 +180,7 @@ NS_ASSUME_NONNULL_END
       if (_response.cacheControlMaxAge > 0) {
         CFHTTPMessageSetHeaderFieldValue(_responseMessage, CFSTR("Cache-Control"), (__bridge CFStringRef)[NSString stringWithFormat:@"max-age=%i, public", (int)_response.cacheControlMaxAge]);
       } else {
-        CFHTTPMessageSetHeaderFieldValue(_responseMessage, CFSTR("Cache-Control"), CFSTR("no-cache"));
+        CFHTTPMessageSetHeaderFieldValue(_responseMessage, CFSTR("Cache-Control"), CFSTR("no-store"));
       }
     }
     if (_response.contentType != nil) {
